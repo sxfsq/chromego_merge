@@ -167,7 +167,7 @@ def process_clash(data, index):
                     ssr_meta = f"ssr://{ssr_source}"
                     merged_proxies.append(ssr_meta)
                 #目前仅支持最原始版本ss，无插件支持
-                elif proxy['type'] == 'ss':
+                elif proxy['type'] == 'sstest':
                     server = proxy.get("server", "")
                     port = int(proxy.get("port", 443))
                     password = proxy.get("password", "")
@@ -327,7 +327,7 @@ merged_proxies = []
 process_urls('./urls/clash_urls.txt', process_clash)
 
 # 处理 shadowtls URLs
-process_urls('./urls/sb_urls.txt', process_sb)
+#process_urls('./urls/sb_urls.txt', process_sb)
 
 # 处理 naive URLs
 process_urls('./urls/naiverproxy_urls.txt', process_naive)
